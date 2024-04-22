@@ -28,7 +28,7 @@ export class User {
   lastName: string;
 
   @Column({ nullable: false })
-  phoneNumber: number;
+  phoneNumber: string;
 
   @OneToMany(() => Payment, (payment) => payment.user)
   @JoinColumn()

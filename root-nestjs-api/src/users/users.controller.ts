@@ -19,11 +19,12 @@ export class UsersController {
 
   @Post()
   async createUser(@Body() createUserDto: CreateUserDto) {
-    console.log('called create users');
+    console.log('createUserDto');
     const result = await lastValueFrom(
       this.natsClient.send({ cmd: 'createUser' }, createUserDto),
     );
-    return result; // Assuming this returns something meaningful
+      console.log(result)
+    return result; 
   }
 
   @Get(':id')

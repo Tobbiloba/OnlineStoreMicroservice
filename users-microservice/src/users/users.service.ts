@@ -41,6 +41,7 @@ export class UsersService {
           // If user with given ID is not found, return null or handle accordingly
           return null;
         }
+        console.log(user)
         // Update the user object with the new data
         Object.assign(user, updateUserDto);
         // Save the updated user object
@@ -54,6 +55,7 @@ export class UsersService {
   }
 
   deleteUserById(userId: string) {
+    console.log(userId)
     return this.usersRepository.delete(userId);
   }
 }
