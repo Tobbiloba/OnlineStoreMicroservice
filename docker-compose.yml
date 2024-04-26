@@ -23,10 +23,25 @@ services:
     volumes:
       - ./users-microservice/src:/usr/src/app/src
     command: npm run start:dev
+  products_microservice:
+    build: ./products-microservice
+    volumes:
+      - ./products-microservice/src:/usr/src/app/src
+    command: npm run start:dev
   payments_microservice:
     build: ./payments-microservice
     volumes:
       - ./payments-microservice/src:/usr/src/app/src
+    command: npm run start:dev
+  cart_microservice:
+    build: ./cart-microservice
+    volumes:
+      - ./cart-microservice/src:/usr/src/app/src
+    command: npm run start:dev
+  category_microservice:
+    build: ./category-microservice
+    volumes:
+      - ./category-microservice/src:/usr/src/app/src
     command: npm run start:dev
   nats:
     image: nats

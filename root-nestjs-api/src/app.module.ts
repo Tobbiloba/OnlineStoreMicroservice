@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { UsersModule } from './users/users.module';
 import { PaymentsModule } from './payments/payments.module';
+import { ProductsModule } from './products/products.module';
+import { CartModule } from './cart/cart.module';
+import { CategoryModule } from './category/category.module';
 @Module({
   imports: [
     ClientsModule.register([
@@ -15,6 +18,9 @@ import { PaymentsModule } from './payments/payments.module';
     ]),
     UsersModule,
     PaymentsModule,
+    ProductsModule,
+    CartModule,
+    CategoryModule
   ],
   controllers: [],
   providers: [],
